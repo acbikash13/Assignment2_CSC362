@@ -1,0 +1,17 @@
+﻿  compute.c
+  io.c
+  main.c
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(5,7): warning C4101: 'homeTeamName': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,16): warning C4101: 'HTS': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,41): warning C4101: 'VTS': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,26): warning C4101: 'HTC': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,31): warning C4101: 'VTO': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,6): warning C4101: 'HTO': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(5,25): warning C4101: 'visitingTeamName': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,46): warning C4101: 'VTR': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,21): warning C4101: 'HTH': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,11): warning C4101: 'HTD': unreferenced local variable
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\main.c(9,36): warning C4101: 'VTD': unreferenced local variable
+  Generating Code...
+C:\Users\acharyab2\source\repos\Assignment2\Assignment2\io.c(7): warning C4716: 'getInput': must return a value
+  Assignment2.vcxproj -> C:\Users\acharyab2\source\repos\Assignment2\x64\Debug\Assignment2.exe
