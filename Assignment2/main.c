@@ -1,18 +1,35 @@
 #include "header.h"
 
-
 int main() {
-	char homeTeamName[20], visitingTeamName[20];
+    FILE *file = fopen("football1.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
 
-	// O =  Offensive Strength,D = Defensive Strength, S = Special Teams Strength/ home strength for home team S
-	// R = Road Strength for Visiting Team, C = Home field advantage for Crow Noise
-	int HTO, HTD, HTS, HTH, HTC, VTO, VTD, VTS, VTR;
+    int totalGames = 0, homeWins = 0, totalDifference = 0;
+    double homeWinPercentage, avgScoreDifference;
 
+    char homeTeam[21], visitingTeam[21];
+    int HTO, HTD, HTS, HTH, HTC, VTO, VTD, VTS, VTR;
 
-	FILE* fp = fopen("football1.txt", "r");
-	if (fp == NULL) {
-		printf("File Reading error!");
+    while (getInput(file, homeTeam, &HTO, &HTD, &HTS, &HTH, &HTC,
+                    visitingTeam, &VTO, &VTD, &VTS, &VTR) != EOF) {
+        // Call the necessary functions for computations
+        // ...
 
-	}
-	return 0;
+        // Update running totals
+        updateTotals(&totalGames, &homeWins, &totalDifference, computeScoreDifference());
+
+        // Output the result of each game
+        outputResult(homeTeam, visitingTeam, computeScoreDifference());
+    }
+
+    fclose(file);
+
+    // Output summary
+    computeSummary(totalGames, homeWins, totalDifference, &homeWinPercentage, &avgScoreDifference);
+    outputSummary(homeWinPercentage, avgScoreDifference);
+
+    return 0;
 }
